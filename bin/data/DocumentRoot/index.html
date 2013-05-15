@@ -49,81 +49,83 @@
     }
 
 
-.navbar-inner{
-  border-radius:0px;
-  background: #000 !important; 
-  background-image: none;
-  background-repeat: no-repeat;
-  filter: none !important;
-  border-top:1px solid #00ADEE !important;
-  border-bottom:1px solid #00ADEE !important;
-  border-left:0px !important;
-  border-right:0px !important;
-}
+    .navbar-inner{
+    border-radius:0px;
+    background: #000 !important; 
+    background-image: none;
+    background-repeat: no-repeat;
+    filter: none !important;
+    border-top:1px solid #00ADEE !important;
+    border-bottom:1px solid #00ADEE !important;
+    border-left:0px !important;
+    border-right:0px !important;
+    }
 
-.navbar {
-  display: block;
-  font-size: 20px;
-  font-weight: 200;
-  color: #777777;
-  text-shadow: 0 1px 0 #ffffff;
-}
+    .navbar {
+    display: block;
+    font-size: 20px;
+    font-weight: 200;
+    color: #777777;
+    text-shadow: 0 1px 0 #ffffff;
+    }
 
-nav.li.active {
-  background-color: none;
-  }
-  .instructions{
-    background-color:#00ADEE;
-    margin:0 auto;
-    width:auto;
-  }
-  .instructions{
-    text-align: center;
-  }
+    nav.li.active {
+    background-color: none;
+    }
+    .instructions{
+      background-color:#00ADEE;
+      margin:0 auto;
+      width:auto;
+    }
+    .instructions{
+      text-align: center;
+    }
 
-  .instructionSteps{
-    color:#0F75BC;
-    font-size: 22px;
-    margin:10px;
-    float:right;
-  }
-  .instructionSteps span{
-    margin-right:24px;
-  }
-  .instructionSteps:after{
-    clear:both;
-  }
-  .circleactive{
-    color: white;
-  }
+    .instructionSteps{
+      color:#0F75BC;
+      font-size: 22px;
+      margin:10px;
+      float:right;
+    }
+    .instructionSteps span{
+      margin-right:24px;
+    }
+    .instructionSteps:after{
+      clear:both;
+    }
+    .circleactive{
+      color: white;
+    }
 
-  #leftArrow, #rightArrow{
-    width:74px;
-    height:76px;
-    min-width:74px;
-    min-height:76px;
-    background-position: center center;
-    cursor:pointer;
-  }
-  #leftArrow{
-    position:fixed;
-    left:0;
-    top:40%;
-    background-image: url(./img/arrows_pixels_blue-left.png);
-  }
-  #leftArrow:hover{
-    background-image: url(./img/arrows_pixels_white-left.png); 
-  }
+    .headerBullet{
+      color:#00ADEE;font-size:90%;position:relative;top:-1px;
+    }
 
-  #rightArrow{
-    position:fixed;
-    right:0;
-    top:40%;
-    background-image: url(./img/arrows_pixels_blue-right.png);
-  }
-  #rightArrow:hover{
-    background-image: url(./img/arrows_pixels_white-right.png);
-  }
+    #leftArrow, #rightArrow{
+      width:74px;
+      height:76px;
+      min-width:74px;
+      min-height:76px;
+      background-position: center center;
+      cursor:pointer;
+      position:fixed;
+      top:40%;
+    }
+    #leftArrow{
+      left:0;
+      background-image: url(./img/arrows_pixels_blue-left.png);
+    }
+    #leftArrow:hover{
+      background-image: url(./img/arrows_pixels_white-left.png); 
+    }
+
+    #rightArrow{
+      right:0;
+      background-image: url(./img/arrows_pixels_blue-right.png);
+    }
+    #rightArrow:hover{
+      background-image: url(./img/arrows_pixels_white-right.png);
+    }
 
     </style>
     
@@ -150,9 +152,9 @@ nav.li.active {
     </div>
     
     <div class="row">
-      <div class="hero-unit">
+      <div class="hero-unit offset1 span10">
         <h3>
-          <span class="fontawesome-circle" style="color:#00ADEE;font-size:90%;position:relative;top:-1px;"></span>
+          <span class="fontawesome-circle headerBullet"></span>
           Set Up
         </h3>
         <div class="instructions">
@@ -162,11 +164,11 @@ nav.li.active {
     </div>
   </div>
 
-  <div class="navArrows">
-    <div id="leftArrow">
+  <div class="navArrows row span12">
+    <div id="leftArrow" class="span1">
       <!-- <img src="./img/arrows_pixels_blue-left.png"> -->
     </div>
-    <div id="rightArrow">
+    <div id="rightArrow" class="span1 offset10">
       <!-- <img src="./img/arrows_pixels_blue-right.png"> -->
     </div>
   </div>
