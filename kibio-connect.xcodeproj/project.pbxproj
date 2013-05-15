@@ -50,6 +50,7 @@
 		E7E077E515D3B63C0020DFD4 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7E077E415D3B63C0020DFD4 /* CoreVideo.framework */; };
 		E7E077E815D3B6510020DFD4 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7E077E715D3B6510020DFD4 /* QTKit.framework */; };
 		E7F985F815E0DEA3003869B5 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7F985F515E0DE99003869B5 /* Accelerate.framework */; };
+		FD5B8BFD1743E80300B21EB8 /* MediaTypeMap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD5B8BFB1743E80300B21EB8 /* MediaTypeMap.cpp */; };
 		a7ebf57756f62c20c72a9713924e778e /* AvahiClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = e6d94f86e5ef56213fecef4428bf90c2 /* AvahiClient.cpp */; };
 		aa9a67755bbee042222a5ef9c7ebb90c /* ofxHTTPCompression.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 819ea68c0a836287ebffe8198aca2298 /* ofxHTTPCompression.cpp */; };
 		ab4811344d99a9e30de89022b92b6686 /* ofxHTTPPost.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1ff97281e2fd820c2c9944cc065ab978 /* ofxHTTPPost.cpp */; };
@@ -202,6 +203,10 @@
 		E7E077E415D3B63C0020DFD4 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = /System/Library/Frameworks/CoreVideo.framework; sourceTree = "<absolute>"; };
 		E7E077E715D3B6510020DFD4 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
 		E7F985F515E0DE99003869B5 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = /System/Library/Frameworks/Accelerate.framework; sourceTree = "<absolute>"; };
+		FD5B8BF91743E80300B21EB8 /* ApacheMimeTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApacheMimeTypes.h; sourceTree = "<group>"; };
+		FD5B8BFA1743E80300B21EB8 /* BaseMediaTypeProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseMediaTypeProvider.h; sourceTree = "<group>"; };
+		FD5B8BFB1743E80300B21EB8 /* MediaTypeMap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MediaTypeMap.cpp; sourceTree = "<group>"; };
+		FD5B8BFC1743E80300B21EB8 /* MediaTypeMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaTypeMap.h; sourceTree = "<group>"; };
 		aa19c7b5eb9660087056e75a44a0a212 /* forwards.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = forwards.h; path = ../../../addons/ofxJSON/libs/jsoncpp/include/json/forwards.h; sourceTree = SOURCE_ROOT; };
 		abf332db5a783853e6ad630b4c8249e9 /* ofxHTTPBaseRequest.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxHTTPBaseRequest.cpp; path = ../../../addons/ofxHTTP/src/ofxHTTPBaseRequest.cpp; sourceTree = SOURCE_ROOT; };
 		b1a815f999ff335f8f4b85e88c10ee81 /* ofxHTTPPost.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxHTTPPost.h; path = ../../../addons/ofxHTTP/src/ofxHTTPPost.h; sourceTree = SOURCE_ROOT; };
@@ -502,6 +507,7 @@
 		BB4B014C10F69532006C3DED /* addons */ = {
 			isa = PBXGroup;
 			children = (
+				FD5B8BF71743E7FB00B21EB8 /* ofxMediaType */,
 				02258b57617e63d6251ef7634be986d8 /* ofxHTTP */,
 				2865daef86b1907a704ca70bc58ce980 /* ofxJSON */,
 				7cd569961c60b3789e7cbe2264a3af65 /* ofxZeroconf */,
@@ -586,6 +592,26 @@
 				E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */,
 			);
 			name = openFrameworks;
+			sourceTree = "<group>";
+		};
+		FD5B8BF71743E7FB00B21EB8 /* ofxMediaType */ = {
+			isa = PBXGroup;
+			children = (
+				FD5B8BF81743E80300B21EB8 /* src */,
+			);
+			name = ofxMediaType;
+			sourceTree = "<group>";
+		};
+		FD5B8BF81743E80300B21EB8 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				FD5B8BF91743E80300B21EB8 /* ApacheMimeTypes.h */,
+				FD5B8BFA1743E80300B21EB8 /* BaseMediaTypeProvider.h */,
+				FD5B8BFB1743E80300B21EB8 /* MediaTypeMap.cpp */,
+				FD5B8BFC1743E80300B21EB8 /* MediaTypeMap.h */,
+			);
+			name = src;
+			path = ../../../addons/ofxMediaType/src;
 			sourceTree = "<group>";
 		};
 		a5f8a0182a7cf15957061f2b15d9afae /* DNSSD */ = {
@@ -778,6 +804,7 @@
 				36268367458abb12b68679a9b392a497 /* Record.cpp in Sources */,
 				7ab3fd41a4e3523e79c39cc8f29bbc6a /* Service.cpp in Sources */,
 				e19f2f06278f9b5a97212a632c8aa7ae /* Utils.cpp in Sources */,
+				FD5B8BFD1743E80300B21EB8 /* MediaTypeMap.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
