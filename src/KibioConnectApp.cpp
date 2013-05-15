@@ -17,6 +17,7 @@ void KibioConnectApp::setup() {
     ofSetLogLevel(OF_LOG_NOTICE);
 
     ofxWebSocketServerBasic::Settings settings;
+    settings.port = 8081;   
 //    settings.documentRoot = "kibio.github.com";
 
 
